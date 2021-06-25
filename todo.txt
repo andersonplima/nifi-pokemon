@@ -1,0 +1,9 @@
+- Estratégia de retorno de erro com process group específico.
+- Despensa da extração de conteúdo para retorno ao cliente.
+- Teste do JSONPATH sem [*] para gerar variável sem um .0 no final.
+
+docker exec -it [nifi_id] /bin/sh
+
+./cli.sh registry create-flow -u http://pokemon_nifi-registry_1:18080 -b e894e118-a32e-4ac6-a11f-1c895454b8b5 -fn pokemon
+
+./cli.sh registry import-flow-version -u http://pokemon_nifi-registry_1:18080 -f de02f989-257f-4f1a-9d32-279fbeaf1029 -i /tmp/pokemon.json
